@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { StreamBoardComponent } from '@stream-ninja/stream-ninja-ui';
 
 @Component({
-  imports: [],
+  imports: [StreamBoardComponent],
   selector: 'app-root',
-  template: ``
+  template: `
+    <ninja-stream-board />
+  `,
 })
 export class AppComponent {}
