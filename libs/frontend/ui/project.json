@@ -1,6 +1,6 @@
 {
   "name": "stream-ninja-ui",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui/src",
   "prefix": "ninja",
   "projectType": "library",
