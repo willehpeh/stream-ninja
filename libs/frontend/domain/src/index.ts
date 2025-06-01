@@ -1,1 +1,1 @@
-export * from './lib/stream-ninja-frontend-domain';
+export * from './boards';

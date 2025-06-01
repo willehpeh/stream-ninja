@@ -15,11 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@stream-ninja/stream-ninja-frontend-application": [
+        "libs/frontend/application/src/index.ts"
+      ],
       "@stream-ninja/stream-ninja-frontend-domain": [
         "libs/frontend/domain/src/index.ts"
-      ],
-      "@stream-ninja/stream-ninja-frontend-use-cases": [
-        "libs/frontend/use-cases/src/index.ts"
       ]
     }
   },
