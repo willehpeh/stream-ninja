@@ -20,8 +20,7 @@
       ],
       "@stream-ninja/stream-ninja-frontend-use-cases": [
         "libs/frontend/use-cases/src/index.ts"
-      ],
-      "@stream-ninja/stream-ninja-ui": ["libs/frontend/ui/src/index.ts"]
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
