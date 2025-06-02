@@ -1,1 +1,3 @@
-export * from './lib/stream-ninja-frontend-use-cases';
+export * from './boards/facades/ngrx.board.facade';
+export * from './boards/contracts/board.facade';
+

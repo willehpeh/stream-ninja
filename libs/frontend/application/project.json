@@ -2,8 +2,12 @@
   "name": "stream-ninja-frontend-application",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/application/src",
+  "prefix": "lib",
   "projectType": "library",
   "tags": [],
-  "// targets": "to see all targets run: nx show project stream-ninja-frontend-application --web",
-  "targets": {}
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
 }
