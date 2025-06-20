@@ -1,0 +1,26 @@
+{
+  "name": "@stream-ninja/api-ninja-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@stream-ninja/api-ninja"
+    ],
+    "targets": {
+      "e2e": {
+        "executor": "@nx/jest:jest",
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "options": {
+          "jestConfig": "apps/api-ninja-e2e/jest.config.ts",
+          "passWithNoTests": true
+        },
+        "dependsOn": [
+          "@stream-ninja/api-ninja:build",
+          "@stream-ninja/api-ninja:serve"
+        ]
+      }
+    }
+  }
+}
