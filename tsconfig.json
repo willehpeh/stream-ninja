@@ -8,6 +8,15 @@
     },
     {
       "path": "./apps/api-ninja"
+    },
+    {
+      "path": "./libs/domain"
+    },
+    {
+      "path": "./libs/application"
+    },
+    {
+      "path": "./libs/infrastructure"
     }
   ]
 }
