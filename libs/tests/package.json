@@ -14,8 +14,7 @@
     "./package.json": "./package.json"
   },
   "nx": {
-    "name": "tests-ninja",
-    "tags": ["scope:tests"]
+    "name": "tests-ninja"
   },
   "dependencies": {}
 }

@@ -20,6 +20,9 @@
     },
     {
       "path": "./libs/tests"
+    },
+    {
+      "path": "./libs/tests"
     }
   ],
   "compilerOptions": {
