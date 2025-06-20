@@ -17,6 +17,9 @@
     },
     {
       "path": "./libs/infrastructure"
+    },
+    {
+      "path": "./libs/tests"
     }
   ]
 }

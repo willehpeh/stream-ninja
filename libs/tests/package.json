@@ -1,5 +1,5 @@
 {
-  "name": "@stream-ninja/domain-ninja",
+  "name": "@stream-ninja/tests-ninja",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -14,8 +14,8 @@
     "./package.json": "./package.json"
   },
   "nx": {
-    "name": "domain-ninja",
-    "tags": ["scope:domain"]
+    "name": "tests-ninja",
+    "tags": ["scope:tests"]
   },
   "dependencies": {}
 }

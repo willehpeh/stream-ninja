@@ -14,7 +14,8 @@
     "./package.json": "./package.json"
   },
   "nx": {
-    "name": "application-ninja"
+    "name": "application-ninja",
+    "tags": ["scope:application"]
   },
   "dependencies": {}
 }

@@ -37,7 +37,8 @@
       "exclude": [
         "libs/domain/*",
         "libs/application/*",
-        "libs/infrastructure/*"
+        "libs/infrastructure/*",
+        "libs/tests/*"
       ]
     },
     {
@@ -70,7 +71,8 @@
       "include": [
         "libs/domain/*",
         "libs/application/*",
-        "libs/infrastructure/*"
+        "libs/infrastructure/*",
+        "libs/tests/*"
       ],
       "options": {
         "typecheck": {

@@ -14,7 +14,8 @@
     "./package.json": "./package.json"
   },
   "nx": {
-    "name": "infrastructure-ninja"
+    "name": "infrastructure-ninja",
+    "tags": ["scope:infrastructure"]
   },
   "dependencies": {}
 }
