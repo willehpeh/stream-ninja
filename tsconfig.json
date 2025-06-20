@@ -24,18 +24,5 @@
     {
       "path": "./libs/tests"
     }
-  ],
-  "compilerOptions": {
-    "paths": {
-      "@stream-ninja/domain": [
-        "libs/domain/src/index.ts"
-      ],
-      "@stream-ninja/application": [
-        "libs/application/src/index.ts"
-      ],
-      "@stream-ninja/infrastructure": [
-        "libs/infrastructure/src/index.ts"
-      ]
-    }
-  }
+  ]
 }
