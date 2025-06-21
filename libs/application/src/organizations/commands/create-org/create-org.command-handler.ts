@@ -8,6 +8,6 @@ export class CreateOrgCommandHandler implements ICommandHandler<CreateOrgCommand
   }
 
   async execute(command: CreateOrgCommand): Promise<void> {
-
+    return Promise.resolve();
   }
 }
