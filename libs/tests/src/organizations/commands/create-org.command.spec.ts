@@ -1,4 +1,4 @@
-import { CreateOrgCommand, CreateOrgCommandHandler, CreateOrgDto } from '@stream-ninja/application-ninja';
+import { CreateOrgCommand, CreateOrgCommandHandler, CreateOrgDto } from '@stream-ninja/application';
 
 describe('Create Org', () => {
   let dto: CreateOrgDto;
