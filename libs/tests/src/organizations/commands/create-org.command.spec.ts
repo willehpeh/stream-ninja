@@ -38,6 +38,11 @@ describe('Create Org', () => {
     expect(repository.organizations[0].snapshot().teams).toEqual([]);
   });
 
+  it('should have no members', async () => {
+    await handler.execute(command);
+    expect(repository.organizations[0].snapshot().members).toEqual([]);
+  });
+
   describe('Given an organization already exists with the same name', () => {
     beforeEach(async () => {
       await handler.execute(command);

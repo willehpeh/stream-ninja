@@ -4,11 +4,13 @@ import { Entity } from '../../../common'
 import {
   OrganizationSnapshot
 } from './organization-snapshot';
+import { Member } from '../member';
 
 export class Organization implements Entity<OrganizationId, OrganizationSnapshot> {
   private readonly _id: OrganizationId;
   private _name: OrganizationName;
   private readonly _teams: Team[] = [];
+  private readonly _members: Member[] = [];
 
   private constructor(id: OrganizationId, name: OrganizationName) {
     this._id = id;
@@ -27,7 +29,8 @@ export class Organization implements Entity<OrganizationId, OrganizationSnapshot
     return {
       id: this._id.value(),
       name: this._name.value(),
-      teams: this._teams.map(team => team.snapshot())
+      teams: this._teams.map(team => team.snapshot()),
+      members: this._members.map(member => member.snapshot())
     };
   }
 }
