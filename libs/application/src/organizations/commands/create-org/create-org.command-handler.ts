@@ -1,7 +1,7 @@
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 import { CreateOrgCommand } from './create-org.command.js';
 import { OrganizationId, OrganizationName, OrganizationsRepository } from '@stream-ninja/domain';
-import { Organization } from '@stream-ninja/domain/src/organizations/entities/organization/organization';
+import { Organization } from '@stream-ninja/domain/src/organizations/organization/entities/organization';
 
 @CommandHandler(CreateOrgCommand)
 export class CreateOrgCommandHandler implements ICommandHandler<CreateOrgCommand> {
