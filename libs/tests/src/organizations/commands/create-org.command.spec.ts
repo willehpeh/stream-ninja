@@ -1,6 +1,6 @@
 import { CreateOrgCommand, CreateOrgCommandHandler, CreateOrgDto } from '@stream-ninja/application';
 import { InMemoryOrganizationsRepository } from '@stream-ninja/infrastructure';
-import { Organization, OrganizationId } from '@stream-ninja/domain';
+import { OrganizationId } from '@stream-ninja/domain';
 
 describe('Create Org', () => {
   let dto: CreateOrgDto;
