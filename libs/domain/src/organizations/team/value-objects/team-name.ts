@@ -1,4 +1,4 @@
-import { ValueObject } from '../../common';
+import { ValueObject } from '../../../common';
 
 export class TeamName implements ValueObject<string> {
   private constructor(private readonly _name: string) {

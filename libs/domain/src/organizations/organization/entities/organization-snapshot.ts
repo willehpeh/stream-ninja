@@ -1,4 +1,4 @@
-import { TeamSnapshot } from '../../entities/team';
+import { TeamSnapshot } from '../../team/entities';
 import { MemberSnapshot } from '../../entities/member';
 
 export type OrganizationSnapshot = {

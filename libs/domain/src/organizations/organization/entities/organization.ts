@@ -1,5 +1,5 @@
 import { OrganizationId, OrganizationName } from '../../value-objects';
-import { Team } from '../../entities/team';
+import { Team } from '../../team/entities';
 import { Entity } from '../../../common'
 import {
   OrganizationSnapshot
