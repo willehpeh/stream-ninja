@@ -1,6 +1,6 @@
 import { CreateOrgCommand, CreateOrgCommandHandler, CreateOrgDto } from '@stream-ninja/application';
 import { InMemoryOrganizationsRepository } from '@stream-ninja/infrastructure';
-import { OrganizationId } from '@stream-ninja/domain';
+import { Organization, OrganizationId } from '@stream-ninja/domain';
 
 describe('Create Org', () => {
   let dto: CreateOrgDto;
@@ -41,6 +41,11 @@ describe('Create Org', () => {
   it('should have no members', async () => {
     await handler.execute(command);
     expect(repository.organizations[0].snapshot().members).toEqual([]);
+  });
+
+  it('should return the id of the created organization', async () => {
+    const id = await handler.execute(command);
+    expect(id).toBe(repository.organizations[0].id().value());
   });
 
   describe('Given an organization already exists with the same name', () => {

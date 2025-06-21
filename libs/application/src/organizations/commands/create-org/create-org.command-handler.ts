@@ -8,13 +8,14 @@ export class CreateOrgCommandHandler implements ICommandHandler<CreateOrgCommand
   constructor(private readonly organizations: OrganizationsRepository) {
   }
 
-  async execute({ dto }: CreateOrgCommand): Promise<void> {
+  async execute({ dto }: CreateOrgCommand): Promise<string> {
     const name = new OrganizationName(dto.name);
     if (await this.organizations.existsWithName(name)) {
       throw new Error('Organization already exists with same name');
     }
     const id = OrganizationId.new();
     const organization = Organization.create({ id, name });
-    return this.organizations.add(organization);
+    await this.organizations.add(organization);
+    return organization.id().value();
   }
 }
