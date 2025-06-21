@@ -1,5 +1,5 @@
 import { Organization } from '../entities/organization';
 
 export abstract class OrganizationsRepository {
-  abstract create(org: Organization): Promise<void>;
+  abstract add(org: Organization): Promise<void>;
 }
