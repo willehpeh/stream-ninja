@@ -33,6 +33,11 @@ describe('Create Org', () => {
     expect(validId).toBeDefined();
   });
 
+  it('should have no teams', async () => {
+    await handler.execute(command);
+    expect(repository.organizations[0].snapshot().teams).toEqual([]);
+  });
+
   describe('Given an organization already exists with the same name', () => {
     beforeEach(async () => {
       await handler.execute(command);
