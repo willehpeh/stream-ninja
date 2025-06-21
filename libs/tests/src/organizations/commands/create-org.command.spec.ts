@@ -49,7 +49,7 @@ describe('Create Org', () => {
     });
 
     it('should throw an error', async () => {
-      await expect(handler.execute(command)).rejects.toThrow();
+      await expect(handler.execute(command)).rejects.toThrow('Organization already exists with same name');
     });
   });
 });
