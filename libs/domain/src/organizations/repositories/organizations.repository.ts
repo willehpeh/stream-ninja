@@ -1,4 +1,4 @@
-import { Organization } from '../entities/organization';
+import { Organization } from '../entities/organization/organization';
 import { OrganizationName } from '../value-objects';
 
 export abstract class OrganizationsRepository {

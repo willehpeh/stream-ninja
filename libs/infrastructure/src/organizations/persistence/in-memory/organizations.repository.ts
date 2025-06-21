@@ -1,5 +1,5 @@
 import { OrganizationName, OrganizationsRepository } from '@stream-ninja/domain';
-import { Organization } from '@stream-ninja/domain/src/organizations/entities/organization';
+import { Organization } from '@stream-ninja/domain/src/organizations/entities/organization/organization';
 
 export class InMemoryOrganizationsRepository implements OrganizationsRepository {
   public readonly organizations: Organization[] = [];
