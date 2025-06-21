@@ -8,16 +8,27 @@ describe('Create Team', () => {
   let repository: InMemoryOrganizationsRepository;
 
   beforeEach(() => {
+    repository = new InMemoryOrganizationsRepository();
+    repository.testMethods().addEmptyOrg();
     dto = {
       name: 'test team',
-      organizationId: 'test-org-id',
+      organizationId: repository.organizations[0].id().value(),
     };
     command = new CreateTeamCommand(dto);
-    repository = new InMemoryOrganizationsRepository();
-    handler = new CreateTeamCommandHandler();
+    handler = new CreateTeamCommandHandler(repository);
   });
 
-  it('should create', async () => {
-    expect(handler).toBeDefined();
+  it('should create one team in the org', async () => {
+    await handler.execute(command);
+    const org = repository.organizations[0];
+    expect(org.snapshot().teams.length).toBe(1);
+  });
+
+  it('should throw an error if there is no org with that ID', async () => {
+    const badCommand = new CreateTeamCommand({
+      name: 'test team',
+      organizationId: crypto.randomUUID()
+    });
+    await expect(() => handler.execute(badCommand)).rejects.toThrow(`Organization with id ${ badCommand.dto.organizationId } not found`);
   });
 });

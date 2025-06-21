@@ -1,10 +1,8 @@
 import { OrganizationId, OrganizationName } from '../value-objects';
-import { Team } from '../../team/entities';
-import { Entity } from '../../../common'
-import {
-  OrganizationSnapshot
-} from './organization-snapshot';
-import { Member } from '../../member/entities';
+import { Team, TeamId, TeamName } from '../../team';
+import { Entity } from '../../../common';
+import { OrganizationSnapshot } from './organization-snapshot';
+import { Member } from '../../member';
 
 export class Organization implements Entity<OrganizationId, OrganizationSnapshot> {
   private readonly _id: OrganizationId;
@@ -32,5 +30,9 @@ export class Organization implements Entity<OrganizationId, OrganizationSnapshot
       teams: this._teams.map(team => team.snapshot()),
       members: this._members.map(member => member.snapshot())
     };
+  }
+
+  registerTeam(id: TeamId, name: TeamName): void {
+    this._teams.push(new Team(id, name));
   }
 }
