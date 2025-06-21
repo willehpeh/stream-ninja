@@ -9,8 +9,11 @@ export class CreateOrgCommandHandler implements ICommandHandler<CreateOrgCommand
   }
 
   async execute({ dto }: CreateOrgCommand): Promise<void> {
-    const id = OrganizationId.new();
     const name = new OrganizationName(dto.name);
+    if (await this.organizations.existsWithName(name)) {
+      throw new Error('Organization already exists');
+    }
+    const id = OrganizationId.new();
     const organization = Organization.create({ id, name });
     return this.organizations.add(organization);
   }

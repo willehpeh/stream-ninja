@@ -32,4 +32,14 @@ describe('Create Org', () => {
     const validId = OrganizationId.fromString(repository.organizations[0].snapshot().id);
     expect(validId).toBeDefined();
   });
+
+  describe('Given an organization already exists with the same name', () => {
+    beforeEach(async () => {
+      await handler.execute(command);
+    });
+
+    it('should throw an error', async () => {
+      await expect(handler.execute(command)).rejects.toThrow();
+    });
+  });
 });
