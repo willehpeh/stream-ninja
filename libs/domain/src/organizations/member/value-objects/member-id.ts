@@ -1,4 +1,4 @@
-import { ValueObject } from '../../common';
+import { ValueObject } from '../../../common';
 
 export class MemberId implements ValueObject<string> {
   private constructor(private readonly _id: string) {

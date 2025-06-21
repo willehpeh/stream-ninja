@@ -1,10 +1,10 @@
-import { OrganizationId, OrganizationName } from '../../value-objects';
+import { OrganizationId, OrganizationName } from '../value-objects';
 import { Team } from '../../team/entities';
 import { Entity } from '../../../common'
 import {
   OrganizationSnapshot
 } from './organization-snapshot';
-import { Member } from '../../entities/member';
+import { Member } from '../../member/entities';
 
 export class Organization implements Entity<OrganizationId, OrganizationSnapshot> {
   private readonly _id: OrganizationId;

@@ -1,5 +1,5 @@
 import { Entity } from '../../../common';
-import { TeamId, TeamName } from '../../value-objects';
+import { TeamId, TeamName } from '../value-objects';
 import { TeamSnapshot } from './team-snapshot';
 
 export class Team implements Entity<TeamId, TeamSnapshot> {

@@ -1,5 +1,5 @@
 import { TeamSnapshot } from '../../team/entities';
-import { MemberSnapshot } from '../../entities/member';
+import { MemberSnapshot } from '../../member/entities';
 
 export type OrganizationSnapshot = {
   members: MemberSnapshot[];

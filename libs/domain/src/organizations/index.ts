@@ -1,4 +1,4 @@
-export * from './value-objects';
-export * from './entities';
+export * from './member/value-objects';
 export * from './organization';
 export * from './team';
+export * from './member';
